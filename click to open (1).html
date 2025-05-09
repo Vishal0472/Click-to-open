@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 8th Month Anniversary Babbuuu! 😘❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+            text-align: center;
+            color: #8b008b;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff1493;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .game {
+            margin-top: 30px;
+        }
+
+        .game button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .game button:hover {
+            background-color: #ff1493;
+        }
+
+        .celebration {
+            margin-top: 50px;
+            font-size: 2em;
+            color: #ff6347;
+            display: none;
+        }
+
+        .celebration img {
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        .heart-image {
+            width: 200px;
+            margin-top: 30px;
+        }
+
+        .final-message {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ff4500;
+        }
+
+        .sweet-message {
+            font-size: 1.5em;
+            color: #ff1493;
+            margin-top: 30px;
+        }
+
+        .game-stage {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .game-stage img {
+            width: 250px;
+            margin-top: 20px;
+        }
+
+        .guidance {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #ff6347;
+        }
+
+        /* Simple Attractive Popup */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff1493;
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            display: none;
+            box-shadow: 0 0 20px rgba(255, 0, 150, 0.5);
+            border: 5px solid #fff;
+            font-size: 1.3em;
+        }
+
+        .popup .popup-close {
+            font-size: 1.2em;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .popup .popup-close:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy 8th Month Anniversary Babbuuu! 😘❤️</h1>
+        <p>Let’s have some fun with a few games and sweet messages, celebrating our love! 💖</p>
+
+        <!-- Stage 1 -->
+        <div class="game-stage" id="gameStage1" style="display: block;">
+            <p class="sweet-message">Welcome, <span id="randomLove1"></span>! Let’s begin with something simple and sweet... 💕</p>
+            <p class="guidance">Click the button below to start our little game. Ready? ❤️</p>
+            <button id="startGameButton">Start the Journey</button>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="game-stage" id="gameStage2">
+            <p class="sweet-message">Great start, now let’s see if you remember the beginning of our journey together! 💖</p>
+            <p class="guidance">When did we start dating each other? ✨</p>
+            <input type="text" id="dateInput" placeholder="Enter the date" />
+            <button id="checkDateButton">Submit</button>
+            <p class="guidance">Hint: Think back to when our love story officially began! 😉</p>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="game-stage" id="gameStage3">
+            <p class="sweet-message">You’re doing amazing, <span id="randomLove2"></span>! Now, let’s see if you remember the first nickname you gave me! 😘</p>
+            <p class="guidance">What was the first nickname you gave me? 💖</p>
+            <input type="text" id="nicknameInput" placeholder="Enter the nickname" />
+            <button id="checkNicknameButton">Submit</button>
+        </div>
+
+        <!-- Stage 4 (New Questions) -->
+        <div class="game-stage" id="gameStage4">
+            <p class="sweet-message">You’re almost there! Let’s go on with the next questions. 💖</p>
+            <p class="guidance">What does Chinna call you the most? 😘</p>
+            <input type="text" id="nicknameQuestionInput" placeholder="Enter your answer" />
+            <button id="checkNicknameQuestionButton">Submit</button>
+        </div>
+
+        <div class="game-stage" id="gameStage5">
+            <p class="sweet-message">Great! Now, here’s the final question. 😘💖</p>
+            <p class="guidance">Where did Chinna kiss you the most? 😘</p>
+            <input type="text" id="kissLocationInput" placeholder="Enter your answer" />
+            <button id="checkKissLocationButton">Submit</button>
+        </div>
+
+        <!-- Final Stage -->
+        <div class="game-stage" id="finalStage">
+            <p class="sweet-message">Congratulations! You’ve made it through, and now it’s time for the celebration! 💖🎉</p>
+            <!-- Flower bouquet image -->
+            <img src="https://media.istockphoto.com/id/902155732/photo/mixed-flower-bouquet.jpg?s=612x612&w=0&k=20&c=kKD8KAl6n1d4kC21ZmOlNFQrMjZKp00iYdFQOg0L_Oo=" alt="Flower Bouquet" class="heart-image">
+            <p class="sweet-message">You’ve been the best part of my life for the past 8 months, and I’m so grateful for every moment with you, <span id="randomLove3"></span>! ❤️</p>
+            <!-- Heart image -->
+            <img src="https://i.pinimg.com/736x/0c/53/4b/0c534b308c85565c563a44d1aad764d2.jpg" alt="Heart" class="heart-image">
+            <p class="final-message">Happy 8th Month Anniversary, Babbuuu! 🎉🎂 I love you more than words can express, <span id="randomLove4"></span>! 💕</p>
+            <p class="sweet-message">Each day with you feels like a beautiful dream come true. You are the only one I ever needed, <span id="randomLove5"></span>. 💖✨</p>
+        </div>
+
+    </div>
+
+    <!-- Simple Attractive Popup -->
+    <div id="simplePopup" class="popup">
+        <p id="popupMessage">Let’s make this journey as special as our love! 😘</p>
+        <button class="popup-close" id="closePopupButton">Close</button>
+    </div>
+
+    <script>
+        // Array of random love phrases
+        const lovePhrases = [
+            "Maru babbuuu 😘",
+            "Maru babbyyy panda 🐼",
+            "Mari jaaan 🥰",
+            "my wife ji 😌"
+        ];
+
+        // Function to get a random love phrase
+        function getRandomLove() {
+            return lovePhrases[Math.floor(Math.random() * lovePhrases.length)];
+        }
+
+        // Assign random love phrases to the elements on the page
+        document.getElementById('randomLove1').innerText = getRandomLove();
+        document.getElementById('randomLove2').innerText = getRandomLove();
+        document.getElementById('randomLove3').innerText = getRandomLove();
+        document.getElementById('randomLove4').innerText = getRandomLove();
+        document.getElementById('randomLove5').innerText = getRandomLove();
+
+        // Stage 1: Start Game
+        document.getElementById('startGameButton').addEventListener('click', function() {
+            let randomPhrase = getRandomLove();
+
+            // Show the simple popup with a message
+            let popupMessage = document.getElementById("popupMessage");
+            popupMessage.textContent = "Let’s make this journey as special as our love, " + randomPhrase + "!";
+            document.getElementById("simplePopup").style.display = "block";
+            
+            // Transition to next stage after closing popup
+            document.getElementById("closePopupButton").addEventListener('click', function() {
+                document.getElementById("simplePopup").style.display = "none";
+                document.getElementById('gameStage1').style.display = 'none';
+                document.getElementById('gameStage2').style.display = 'block';
+            });
+        });
+
+        // Stage 2: Dating Date Question
+        document.getElementById('checkDateButton').addEventListener('click', function() {
+            let userDate = document.getElementById('dateInput').value.trim().toLowerCase();
+            let correctDate = '10th september'; // Replaced with the new date
+
+            if (userDate.toLowerCase() === correctDate) {
+                showPopup("Yes, that’s correct! I’ll never forget the day we started dating! 😍");
+                document.getElementById('gameStage2').style.display = 'none';
+                document.getElementById('gameStage3').style.display = 'block';
+            } else {
+                showPopup("Not quite, but I know you’ll get it soon! Try again, " + getRandomLove() + "!");
+            }
+        });
+
+        // Stage 3: Nickname Question
+        document.getElementById('checkNicknameButton').addEventListener('click', function() {
+            let userNickname = document.getElementById('nicknameInput').value.trim().toLowerCase();
+            let correctNickname = 'chinna'; // Replaced with the new nickname
+
+            if (userNickname.toLowerCase() === correctNickname) {
+                showPopup("That’s it! You remember! That nickname will always be special to me! 😘💖");
+                document.getElementById('gameStage3').style.display = 'none';
+                document.getElementById('gameStage4').style.display = 'block';
+            } else {
+                showPopup("Oops! Let’s try again. You’re so close, " + getRandomLove() + "!");
+            }
+        });
+
+        // Stage 4: New Question 1 (Nickname)
+        document.getElementById('checkNicknameQuestionButton').addEventListener('click', function() {
+            let userNicknameQuestion = document.getElementById('nicknameQuestionInput').value.trim().toLowerCase();
+            let correctNicknameAnswer = 'babbuuuu'; // New answer for question 1
+
+            if (userNicknameQuestion.toLowerCase() === correctNicknameAnswer) {
+                showPopup("Yes, that’s what Chinna calls you! 😘💖");
+                document.getElementById('gameStage4').style.display = 'none';
+                document.getElementById('gameStage5').style.display = 'block';
+            } else {
+                showPopup("Not quite! Try again! 😘");
+            }
+        });
+
+        // Stage 5: New Question 2 (Kiss Location)
+        document.getElementById('checkKissLocationButton').addEventListener('click', function() {
+            let userKissLocation = document.getElementById('kissLocationInput').value.trim().toLowerCase();
+            let correctKissLocation = 'forehead'; // New answer for question 2
+
+            if (userKissLocation.toLowerCase() === correctKissLocation) {
+                showPopup("Yes! That’s the spot! 😘❤️");
+                document.getElementById('gameStage5').style.display = 'none';
+                document.getElementById('finalStage').style.display = 'block';
+            } else {
+                showPopup("Oops! Try again, " + getRandomLove() + "!");
+            }
+        });
+
+        // Function to show the simple popup
+        function showPopup(message) {
+            let popupMessage = document.getElementById("popupMessage");
+            popupMessage.textContent = message;
+            document.getElementById("simplePopup").style.display = "block";
+        }
+    </script>
+</body>
+</html>
